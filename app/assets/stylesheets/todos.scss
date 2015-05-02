@@ -1,0 +1,19 @@
+// Place all the styles related to the todos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.separated {
+	padding: 5px 0 5px 0;
+	border-bottom: 1px solid #bbbbbb;
+}
+
+.separated:last-child {
+	padding: 5px 0 5px 0;
+	border-bottom: 1px solid #f1f1f1;
+}
+
+.colored-box {
+	background-color: #f1f1f1;
+	border-radius: 10px;
+	border: 1px solid #bbbbbb;
+}

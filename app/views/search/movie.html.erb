@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
+<h1><%= @movie["Title"] %></h1>
 
-	<h1><%= @movie["Title"] %></h1>
+<% if @movie["Plot"] != "N/A" %>
 	<p><%= @movie["Plot"] %></p>
-	<img src='<%@movie["Poster"]%>'></img>
-	
-</body>
-</html>
+<% else %>
+	<p class="center">(No description)</p>
+<% end %>
+
+<% if @movie["Poster"] != "N/A" %>
+	<img src='<%= @movie["Poster"]%>' id="movie-img" class="center"></img>
+<% else %>
+	<p class="center">(No image)</p>
+<% end %>

@@ -1,3 +1,57 @@
 // Place all the styles related to the search controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.separated {
+	padding: 5px 0 5px 0;
+	border-bottom: 1px solid #bbbbbb;
+}
+
+.separated:last-child {
+	padding: 5px 0 5px 0;
+	border-bottom: 1px solid #f1f1f1;
+}
+
+.colored-box {
+	background-color: rgba(255,255,255,0.8) !important;
+	border-radius: 10px;
+	border: 1px solid #bbbbbb;
+}
+
+h1 {
+	text-align: center
+}
+
+img.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #bbbbbb;
+}
+
+#inner {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	padding: 20px 20px 20px 20px;
+}
+
+.center {
+	text-align: center
+}
+
+html { 
+	background: image-url("movie_theater.jpg") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+body {
+	background-color: transparent !important;
+}
+
+#movie-img {
+	width: 100%;
+	height: auto;
+}
