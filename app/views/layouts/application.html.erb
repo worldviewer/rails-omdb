@@ -8,19 +8,95 @@
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-  
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+ 
 </head>
 <body>
 
-<div class="container-fluid">
-	<div class="row">
-		<div id="inner" class="col-xs-10 col-sm-6 col-md-4 col-lg-4 col-sm-offset-3 col-md-offset-4 col-lg-offset-4 col-xs-offset-1 colored-box">
-			<%= yield %>
-		</div>
-	</div>
-</div>
+    <div class="container-fluid">
+       <div class="row">
+            <div id="inner" class="col-xs-10 col-sm-6 col-md-4 col-lg-4 col-sm-offset-3 col-md-offset-4 col-lg-offset-4 col-xs-offset-1 colored-box">
+
+             <%= yield %>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 1: JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- 2: Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <!-- 3: Typeahead for Autocompletion -->
+    <%= javascript_include_tag "typeahead.bundle.min.js" %>
+
+    <!-- 4: Bloodhound for Typeahead UI -->
+    <%= javascript_include_tag "bloodhound.min.js" %>
+
+    <!-- 5: Conversion of TSV into objects ... -->
+    <%= javascript_include_tag "jquery.tsv-0.957.min.js" %>
+
+    <!-- 6: Contains the TSV data for almost 1,000 high-rated movies -->
+    <%= javascript_include_tag "movie_list.js" %>
+
+    <script>
+
+    $(document).ready(function() {
+
+        // I use jquery-tsv to parse from tab-separated values
+        // to objects.  See ...
+        // https://code.google.com/p/jquery-tsv/
+
+        // @param A TSV string, e.g. "val1\tval2..." or "name1\tname2...\n\val1\val2..."
+
+        // @param options optional: { columns ["name1", "name2" ...] }
+
+        // @returns an array of objects, e.g. [ {name1: val1, name2: val2 ...} ...]
+
+        // Set the Options for "Bloodhound" Engine
+        var movies = $.tsv.parseObjects(movie_text, { columns: ["value", "year", "score", "number", "genres"] });
+        console.log(movies);
+
+        var my_Suggestion_class = new Bloodhound({
+            limit: 20,
+            datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
+            queryTokenizer: Bloodhound.tokenizers.whitespace,
+            local: movies
+        });
+
+        //Initialize the Suggestion Engine
+        my_Suggestion_class.initialize();
+
+        // Need to add in UI Template for suggestion details:
+        // suggestion – Used to render a single suggestion. If 
+        // set, this has to be a precompiled template. The 
+        // associated suggestion object will serve as the 
+        // context. Defaults to the value of display wrapped 
+        // in a div tag i.e. <div>{{value}}</div>.
+
+        var typeahead_elem = $('.typeahead-text');
+        typeahead_elem.typeahead({
+            hint: true,
+            highlight: true,
+            minLength: 1
+        },
+        {
+            name: 'value',
+            displayKey: 'value',
+            source: my_Suggestion_class.ttAdapter(),
+            templates: {
+                empty: [
+                    '<div class="noitems">',
+                    'No Items Found',
+                    '</div>'
+                ].join('\n')
+            }
+        });
+
+    });
+
+    </script>
 
 </body>
 </html>

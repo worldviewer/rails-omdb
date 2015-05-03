@@ -1,10 +1,14 @@
-<h1>Movie Search</h1>
+<h1 id="black-text">Opinion<wbr>ated Movie Search</h1>
+<p>Suggestions are based upon IMDb's Top ~3,400 Rated Movies</p>
+
+<!-- text_field_tag 'request', nil, class: 'special_input' -->
+<!-- # => <input class="special_input" id="request" name="request" type="text" /> -->
 
 <div class="center">
 	<%= form_tag("/search", method: "get") do %>
 	<%= label_tag(:q, "Search for:") %>
-	<%= text_field_tag(:q) %>
-	<%= submit_tag "Search", :id => "submit_button" %>
+	<%= text_field_tag 'q', nil, class: 'typeahead-text' %>
+	<%= submit_tag "Search", :id => "submit-button" %>
 	<% end %>
 </div>
 

@@ -23,7 +23,25 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# for HTTP requests
 gem 'typhoeus'
+
+# Typeahead functionality, uses Typeahead.js.  See ...
+# https://github.com/twitter/typeahead.js/#usage
+
+# Inspired by twitter.com's autocomplete search functionality, 
+# typeahead.js is a flexible JavaScript library that provides 
+# a strong foundation for building robust typeaheads.
+
+# The typeahead.js library consists of 2 components: the 
+# suggestion engine, Bloodhound, and the UI view, Typeahead. 
+# The suggestion engine is responsible for computing suggestions 
+# for a given query. The UI view is responsible for rendering 
+# suggestions and handling DOM interactions. Both components 
+# can be used separately, but when used together, they can 
+# provide a rich typeahead experience.
+
+gem 'bootstrap-typeahead-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

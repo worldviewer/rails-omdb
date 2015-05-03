@@ -9,3 +9,8 @@ Rails.application.config.assets.version = '1.0'
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
+
+Rails.application.config.assets.precompile += %w( typeahead.bundle.min.js )
+Rails.application.config.assets.precompile += %w( bloodhound.min.js )
+Rails.application.config.assets.precompile += %w( jquery.tsv-0.957.min.js )
+Rails.application.config.assets.precompile += %w( movie_list.js )

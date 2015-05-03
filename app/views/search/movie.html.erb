@@ -1,9 +1,9 @@
 <h1><%= @movie["Title"] %></h1>
 
 <% if @movie["Plot"] != "N/A" %>
-	<p><%= @movie["Plot"] %></p>
+	<p class="padding"><%= @movie["Plot"] %></p>
 <% else %>
-	<p class="center">(No description)</p>
+	<p class="center plot-padding">(No description)</p>
 <% end %>
 
 <% if @movie["Poster"] != "N/A" %>
