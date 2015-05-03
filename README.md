@@ -1,12 +1,12 @@
 # Challenges I Ran Into with this Project:
 
-1.  I wanted to be helpful with the search box, but **it was difficult to find a list of the best-rated movies in a tab- or comma-separated format**.  With some searching, I found that somebody had already done the scraping, and placed the results here: 
+1. I wanted to be helpful with the search box, but **it was difficult to find a list of the best-rated movies in a tab- or comma-separated format**.  With some searching, I found that somebody had already done the scraping, and placed the results here: 
 
 [Two-Fifty: Track Movies Watched on the IMDb Top 250](http://code.google.com/p/two-fifty/source/browse/trunk/imdb-10000.csv)
 
-2.  That file required some cleanup.  First of all, **it had a varying number of columns**, because not every film had a genre, so I did a regular expressions search with Sublime to replace the specific situation where no genre is listed with "No genre listed".
+2. That file required some cleanup.  First of all, **it had a varying number of columns**, because not every film had a genre, so I did a regular expressions search with Sublime to replace the specific situation where no genre is listed with "No genre listed".
 
-3.  **There were non-ASCII characters in many of the foreign film names** (and even some of the American titles).  So, I used Sublime to clean up the data, by doing a Regular Expression search on
+3. **There were non-ASCII characters in many of the foreign film names** (and even some of the American titles).  So, I used Sublime to clean up the data, by doing a Regular Expression search on
 
 ```
 [^\x00-\x7F]
@@ -14,7 +14,7 @@
 
 Around 50 of these titles were just completely indecipherable, so I deleted them out of the list.
 
-4.  One problem I ran into was that **the typeahead javascript I was using required data to be in a hash format**:
+4. One problem I ran into was that **the typeahead javascript I was using required data to be in a hash format**:
 
 ```
 [ { value:"title", value:"title" }, ... ]
@@ -26,11 +26,11 @@ I decided to see what was available in terms of JavaScript code that would autom
 
 And once I was passing a properly-formatted string to it, I got it to work!
 
-5.  Another issue I ran into was with **Rails' form generator: It appears to somewhat conflict with the typeahead.js and bloodhound.js combination that I used to implement typeahead, insofar as there appear to be two separate text inputs that are on top of one another, and which are redundant**.
+5. Another issue I ran into was with **Rails' form generator: It appears to somewhat conflict with the typeahead.js and bloodhound.js combination that I used to implement typeahead, insofar as there appear to be two separate text inputs that are on top of one another, and which are redundant**.
 
 _Question: Is it possible to override Rails form generator without breaking Rails security?_
 
-6.  Something else I observed was that **the gem I installed for this project**, at ...
+6. Something else I observed was that **the gem I installed for this project**, at ...
 
 [Bootstrap Typeahead for Rails](http://github.com/Nerian/bootstrap-typeahead-rails)
 
@@ -42,7 +42,7 @@ _Question: Is it possible to override Rails form generator without breaking Rail
 
 If I could do this project over again, I would:
 
-1.  Time permitting, **try to use Awk at the command-line to do the data pre-processing**.  There is a new Awk book here, from 2015:
+1. Time permitting, **try to use Awk at the command-line to do the data pre-processing**.  There is a new Awk book here, from 2015:
 
 [Effective awk Programming: Universal Text Processing and Pattern Matching](http://www.amazon.com/Effective-awk-Programming-Universal-Processing/dp/1491904615/ref=pd_sim_b_7?ie=UTF8&refRID=0GWFY4MZXTD8ZNY49CB1)
 
@@ -50,7 +50,7 @@ This data processing text dives into a very similar IMDb situation ...
 
 [Data Science at the Command Line: Facing the Future with Time-Tested Tools](http://books.google.com/books?id=yMSeBAAAQBAJ&pg=PA33&lpg=PA33&dq=top+250+imdb+movies+comma+separated+values&source=bl&ots=2PtuzvT83u&sig=FxcHSSK1hvgcSRrICY7wT04bu7w&hl=en&sa=X&ei=q0tGVZewEI3VoASNnICgDQ&ved=0CDgQ6AEwBA#v=onepage&q=top%20250%20imdb%20movies%20comma%20separated%20values&f=false)
 
-2.  I'd really like to take this project to a more practical level by using **AJAX to source the data from the server side**.  This would have the added benefit of allowing me to use a template to set up the typeahead values, and that would permit me to display the genre, year made and IMDb ratings alongside the titles.
+2. I'd really like to take this project to a more practical level by using **AJAX to source the data from the server side**.  This would have the added benefit of allowing me to use a template to set up the typeahead values, and that would permit me to display the genre, year made and IMDb ratings alongside the titles.
 
 # Using an API with Ruby and Rails
 
