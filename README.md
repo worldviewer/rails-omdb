@@ -1,4 +1,4 @@
-![Animated GIF of Movie Search](./rails-omdb.gif)
+![Animated GIF of Movie Search](rails-omdb.gif)
 
 # Challenges I Ran Into with this Project:
 
