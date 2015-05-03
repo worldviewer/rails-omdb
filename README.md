@@ -8,17 +8,17 @@
 
 3. **There were non-ASCII characters in many of the foreign film names** (and even some of the American titles).  So, I used Sublime to clean up the data, by doing a Regular Expression search on
 
-```
+ ```
  [^\x00-\x7F]
-```
+ ```
 
  Around 50 of these titles were just completely indecipherable, so I deleted them out of the list.
 
 4. One problem I ran into was that **the typeahead javascript I was using required data to be in a hash format**:
 
-```
+ ```
  [ { value:"title", value:"title" }, ... ]
-```
+ ```
 
  I decided to see what was available in terms of JavaScript code that would automatically convert a tab-separated value (TSV) file into this hash.  I found this:
 
