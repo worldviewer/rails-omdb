@@ -12,7 +12,7 @@
 [^\x00-\x7F]
 ```
 
-Around 50 of these titles were just completely indecipherable, so I deleted them out of the list.
+    Around 50 of these titles were just completely indecipherable, so I deleted them out of the list.
 
 4.  One problem I ran into was that **the typeahead javascript I was using required data to be in a hash format**:
 
@@ -20,21 +20,21 @@ Around 50 of these titles were just completely indecipherable, so I deleted them
 [ {value:"title", value:"title"}, ... ]
 ```
 
-I decided to see what was available in terms of JavaScript code that would automatically convert a tab-separated value (TSV) file into this hash.  I found this:
+    I decided to see what was available in terms of JavaScript code that would automatically convert a tab-separated value (TSV) file into this hash.  I found this:
 
     [jquery-tsv - Tab-separated values plugin for jQuery](code.google.com/p/jquery-tsv/)
 
-And once I was passing a properly-formatted string to it, I got it to work!
+    And once I was passing a properly-formatted string to it, I got it to work!
 
 5.  Another issue I ran into was with **Rails' form generator: It appears to somewhat conflict with the typeahead.js and bloodhound.js combination that I used to implement typeahead, insofar as there appear to be two separate text inputs that are on top of one another, and which are redundant**.
 
-Question: Is it possible to override Rails form generator without breaking Rails security?
+    Question: Is it possible to override Rails form generator without breaking Rails security?
 
 6.  Something else I observed was that **the gem I installed for this project**, at ...
 
     [Bootstrap Typeahead for Rails](github.com/Nerian/bootstrap-typeahead-rails)
 
-**This gem did not really appear to accomplish much beyond the installation of files into app directory** bower_components/typeahead.js.  I had to move the assets myself into the assets/javascripts/ directory, and the example in test/ did not walk me through the process of increasing complexity with typeahead, as other sites do, like these two do ...
+    **This gem did not really appear to accomplish much beyond the installation of files into app directory** bower_components/typeahead.js.  I had to move the assets myself into the assets/javascripts/ directory, and the example in test/ did not walk me through the process of increasing complexity with typeahead, as other sites do, like these two do ...
 
     [Typeahead.js Autocomplete Suggestion and Bloodhount Remote Data - Tutorial and Demo](mycodde.blogspot.com/2014/12/typeaheadjs-autocomplete-suggestion.html)
 
@@ -46,7 +46,7 @@ If I could do this project over again, I would:
 
     [Effective awk Programming: Universal Text Processing and Pattern Matching](www.amazon.com/Effective-awk-Programming-Universal-Processing/dp/1491904615/ref=pd_sim_b_7?ie=UTF8&refRID=0GWFY4MZXTD8ZNY49CB1)
 
-This data processing text dives into a very similar IMDb situation ...
+    This data processing text dives into a very similar IMDb situation ...
 
     [Data Science at the Command Line: Facing the Future with Time-Tested Tools](books.google.com/books?id=yMSeBAAAQBAJ&pg=PA33&lpg=PA33&dq=top+250+imdb+movies+comma+separated+values&source=bl&ots=2PtuzvT83u&sig=FxcHSSK1hvgcSRrICY7wT04bu7w&hl=en&sa=X&ei=q0tGVZewEI3VoASNnICgDQ&ved=0CDgQ6AEwBA#v=onepage&q=top%20250%20imdb%20movies%20comma%20separated%20values&f=false)
 
