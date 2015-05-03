@@ -22,7 +22,7 @@
 
     I decided to see what was available in terms of JavaScript code that would automatically convert a tab-separated value (TSV) file into this hash.  I found this:
 
-    [jquery-tsv - Tab-separated values plugin for jQuery](code.google.com/p/jquery-tsv/)
+    [jquery-tsv, Tab-separated values plugin for jQuery](code.google.com/p/jquery-tsv/)
 
     And once I was passing a properly-formatted string to it, I got it to work!
 
