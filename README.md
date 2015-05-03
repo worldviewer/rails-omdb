@@ -17,10 +17,10 @@
 4.  One problem I ran into was that **the typeahead javascript I was using required data to be in a hash format**:
 
 ```
-[ {value:"title", value:"title"}, ... ]
+[ { value:"title", value:"title" }, ... ]
 ```
 
-    I decided to see what was available in terms of JavaScript code that would automatically convert a tab-separated value (TSV) file into this hash.  I found this:
+    I decided to see what was available in terms of JavaScript code that would automatically convert a tab-separated value (TSV) file into this hash.  I found this ...
 
     [jquery-tsv - Tab-separated values plugin for jQuery](code.google.com/p/jquery-tsv/)
 
@@ -34,7 +34,7 @@
 
     [Bootstrap Typeahead for Rails](github.com/Nerian/bootstrap-typeahead-rails)
 
-    **This gem did not really appear to accomplish much beyond the installation of files into app directory** bower_components/typeahead.js.  I had to move the assets myself into the assets/javascripts/ directory, and the example in test/ did not walk me through the process of increasing complexity with typeahead, as other sites do, like these two do ...
+    **This gem did not really appear to accomplish much beyond the installation of files into app directory** bower_components/typeahead.js.  I had to move the assets myself into the assets/javascripts/ directory, and the example in test/ did not walk me through the process of increasing complexity with typeahead, as other sites do, like these two do:
 
     [Typeahead.js Autocomplete Suggestion and Bloodhount Remote Data - Tutorial and Demo](mycodde.blogspot.com/2014/12/typeaheadjs-autocomplete-suggestion.html)
 
