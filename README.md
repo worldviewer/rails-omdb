@@ -3,7 +3,7 @@
 <title>Opinionated Movie Search (on Rails)</title>
 
 <p align="center">
-  <img https://github.com/worldviewer/rails-omdb/blob/master/rails-omdb.gif/>
+  <img src="https://github.com/worldviewer/rails-omdb/blob/master/rails-omdb.gif" />
 </p>
 
 <xmp theme="united" style="display:none;">
