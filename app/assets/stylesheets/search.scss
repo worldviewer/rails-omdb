@@ -9,11 +9,11 @@
 
 .separated:last-child {
 	padding: 5px 0 5px 0;
-	border-bottom: 1px solid #f1f1f1;
+	border-bottom: none;
 }
 
 .colored-box {
-	background-color: rgba(255,255,255,0.8) !important;
+	background-color: rgba(255,255,255,0.9) !important;
 	border-radius: 10px;
 	border: 1px solid #bbbbbb;
 }
@@ -54,4 +54,8 @@ body {
 #movie-img {
 	width: 100%;
 	height: auto;
+}
+
+#submit_button {
+	margin: 10px;
 }

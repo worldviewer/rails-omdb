@@ -4,7 +4,7 @@
 	<%= form_tag("/search", method: "get") do %>
 	<%= label_tag(:q, "Search for:") %>
 	<%= text_field_tag(:q) %>
-	<%= submit_tag("Search") %>
+	<%= submit_tag "Search", :id => "submit_button" %>
 	<% end %>
 </div>
 
