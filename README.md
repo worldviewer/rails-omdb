@@ -1,4 +1,4 @@
-![Animated GIF of Movie Search](https://github.com/worldviewer/rails-omdb/rails-omdb.gif)
+![Animated GIF of Movie Search](https://github.com/worldviewer/rails-omdb/blob/master/rails-omdb.gif)
 
 # Challenges I Ran Into with this Project:
 
