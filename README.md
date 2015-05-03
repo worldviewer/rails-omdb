@@ -52,7 +52,7 @@ If I could do this project over again, I would:
 
 2. I'd really like to take this project to a more practical level by using **AJAX to source the data from the server side**.  This would have the added benefit of allowing me to use a template to set up the typeahead values, and that would permit me to display the genre, year made and IMDb ratings alongside the titles.
 
-# Using an API with Ruby and Rails
+# The Project: Using an API with Ruby and Rails
 
 Objectives
 Students will be able to...
