@@ -1,3 +1,5 @@
+![Animated GIF of Movie Search](./rails-omdb.gif)
+
 # Challenges I Ran Into with this Project:
 
 1. I wanted to be helpful with the search box, but **it was difficult to find a list of the best-rated movies in a tab- or comma-separated format**.  With some searching, I found that somebody had already done the scraping, and placed the results here: 
