@@ -28,7 +28,7 @@ And once I was passing a properly-formatted string to it, I got it to work!
 
 5.  Another issue I ran into was with **Rails' form generator: It appears to somewhat conflict with the typeahead.js and bloodhound.js combination that I used to implement typeahead, insofar as there appear to be two separate text inputs that are on top of one another, and which are redundant**.
 
-Question: Is it possible to override Rails form generator without breaking Rails security?
+_Question: Is it possible to override Rails form generator without breaking Rails security?_
 
 6.  Something else I observed was that **the gem I installed for this project**, at ...
 
