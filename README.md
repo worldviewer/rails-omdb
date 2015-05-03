@@ -1,4 +1,6 @@
--->![Animated GIF of Movie Search](https://github.com/worldviewer/rails-omdb/blob/master/rails-omdb.gif)<--
+<p align="center">
+  <img https://github.com/worldviewer/rails-omdb/blob/master/rails-omdb.gif/>
+</p>
 
 # Challenges I Ran Into with this Project:
 
