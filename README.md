@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html>
-<title>Opinionated Movie Search (on Rails)</title>
-
 <p align="center">
   <img src="https://github.com/worldviewer/rails-omdb/blob/master/rails-omdb.gif" />
 </p>
-
-<xmp theme="united" style="display:none;">
 
 # Challenges I Ran Into with this Project:
 
@@ -157,8 +151,3 @@ GET /movie?q=tt0477348
 Our app needs to make a request to the OMDB API for the movie with this ID and present the user with an HTML page containing these results.
 
 [Solution](https://github.com/sf-wdi-17/rails_apis_lesson)
-
-</xmp>
-
-<script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
-</html>
